@@ -1,0 +1,174 @@
+.encabezado{
+  position: relative;
+  display:inline-block;
+  font-size: calc(1em + 3vw);
+  }
+
+
+#pic_fondo {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+#Trab_con_nos {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  text-align:center; 
+  text-emphasis-style:initial;
+  color: rgb(179, 174, 255);
+  text-shadow: 3px 3px 5px black;
+}
+
+.Intro{
+  font-family:cursive;
+  text-align:center; 
+  color:white;
+  text-emphasis:initial; 
+}
+
+.Req{
+  color:white;
+  text-align:center; 
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-decoration: underline;
+  font-size:x-large;
+}
+
+.Opc_req{
+  background-color:rgba(2, 183, 255, 0.925);
+  color:rgba(0,61,127);
+  box-shadow: 3px 3px 5px black;
+  margin-left: 20%;
+  margin-right: 20%;
+  border-radius: 7px;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align:center;
+  font-size:x-large;
+}
+
+#requisitos{
+    padding: 10px;
+}
+
+#linea {
+  background-color: rgba(0,61,127);
+  max-width: 100%; 
+  size: 1;
+  box-shadow: 3px 3px 5px black;
+}
+
+body{
+  background-color: rgba(0,61,127);
+}
+
+.Boton{
+  text-align: center;
+}
+
+#bot_comenzar, #Enviar{
+    background-color: #020120;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px black;
+  }
+  
+#bot_comenzar, #Enviar:hover {
+    background-color: #0c137a;
+  }
+
+#comp_formulario{
+display: none;
+}
+
+.foto_perf{
+  padding: 10px;
+  }
+
+  #lab_sel_img{
+    color:white;
+    padding: 5px;
+    font-size: larger;
+    font-family: cursive;
+}
+
+#mostrar_foto{
+  border: 3px solid rgb(0, 217, 255);
+  box-shadow: 3px 3px 5px black;
+  height: 200px;
+}
+
+@media screen and (min-width: 420px) {
+  form {
+    display: block;
+    margin: 0 auto;
+    max-width: 420px;
+  }
+}
+
+form {
+  text-align:center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+fieldset{
+  /*margin-left: 5%;
+  margin-right: 5%;*/
+  background-color: rgba(245, 245, 245, 0.925);
+  border-radius: 6px;
+  box-shadow: 3px 3px 5px black;
+  }
+
+legend{
+  background-color:rgba(245, 245, 245, 0.925);
+  border-radius: 6px;
+  border: none;
+}
+
+.hijos{
+  display: inline-table;
+}
+
+#label_hijos{
+  display: none;
+  float:none;
+  
+}
+
+#input_hijos{
+  width: 30px;
+  display: none;
+  float:right;
+  padding-left: none;
+}
+
+#muestraedad {
+  display: none
+  
+}
+
+#cartelerror, #Primario, #prim_comp, #Secundario, #sec_comp, #Superior, #trab1, #trab2 {
+  display: none;
+}
+
+#Piedepagina{
+  text-align: center;
+  color: white;
+  display: none;
+}
+
+#InfoFinal{
+  font-family:cursive;
+  text-align:center; 
+  text-emphasis:initial;
+  font-size: large;
+}
+
+#despedida{
+  font-size:xx-large;
+}

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+
+<body>
+    
+    <header>
+        <div class="encabezado" >
+            <img id="pic_fondo" srcset="PIC/img01.jpg 480w,
+                     PIC/img01.jpg 800w"
+             sizes="(max-width: 600px) 480px,
+                    800px"
+             src="PIC/img01.jpg" alt="Milenium SRL">
+        </div>
+        <div id="Trab_con_nos" >Trabaja con nosotros</div>
+        <hr id= "linea">
+    </header>
+    
+    <script src="js/index.js"></script>
+
+    <main>
+        <div class="Intro">
+            <p>Si esta interesado en formar parte de nuestra Empresa, complete los siguientes datos para que tengamos presente su Curriculum Vitae</p>
+        </div>
+        <div class="Req">
+            <p id="tit_req">Requisitos:</p>
+        </div>
+        <div class="Opc_req">
+            <ul id="requisitos">
+                <li>Ser mayor de 18 años</li><br>
+                <li>Tener el secundario completo</li><br>
+                <li>Disponibilidad horaria</li><br>                
+            </ul>
+        </div>
+        <div class="Boton">
+            <button type="button" id="bot_comenzar">Comenzar</button>
+        </div>
+        <hr id= "linea">
+        
+        <Section id="comp_formulario">
+            
+            <form id="formulario" action="" method="post" enctype="multipart/form-data" target="_blank"> <!--target="_blank"-->
+                <p id="lab_sel_img">Inserte una Foto para su Perfil</p>
+                <div class="foto_perf">
+                    <img id="mostrar_foto" src="PIC/Perf_Vacio.jpg" alt="perfil Vacio"> 
+                </div>
+                <div class="subir_imagen">
+                    <input id="Sel_foto" type="file" name="FotoPerfil" accept="image/png, .jpeg, .jpg, image/gif">
+                </div>
+                <br>
+                <fieldset>
+                    <legend>Presentacion</legend>
+                    Nombre y Apellido
+                    <div>
+                        <input type="text" name="NomyAp" placeholder="Ingrese su Nombre" required size="40" minlength="6" maxlength="60"tabindex="1"/>
+                    </div>
+                    Profesión
+                    <div>
+                        <input type="text" name="Profesion" placeholder="Ej.: Analista en Sistemas de Información" required size="40" title="Título obtenido / En formación / Ninguna" minlength="7" maxlength="50"tabindex="2"/>
+                    </div>
+                    Ocupación
+                    <div>
+                        <input type="text" name="Ocupacion" placeholder="Ingrese su situación actual" required size="40" title="Cargo actual / Estudiante / Desempleado" minlength="10" maxlength="50"tabindex="3"/>
+                    </div><br>
+                    <div>
+                        Disponibilidad
+                        <input id="Disp_full" type="radio" required name="Disp" value="FullTime" required /><label for="Disp_full">Full Time</label>
+                        <input id="Disp_part" type="radio" required name="Disp" value="PartTime" required /><label for="Disp_part">Part Time</label>
+                    </div>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Datos de contacto</legend>
+                    Dirección
+                    <div>
+                        <input type="text" name="Dirección" placeholder="Ingrese su Dirección" required size="40" minlength="6" maxlength="50"tabindex="4"/>
+                    </div>
+                    Telefono
+                    <div>
+                        <input type="number" name="Telefono" placeholder="Ingrese su telefono" required tabindex="5"/>
+                    </div>
+                    Email 
+                    <div>                  
+                        <input type="mail" name="mail" placeholder="usuario@ejemplo.com" required size="40" title="Ingrese su direccion de mail" tabindex="6"/>
+                    </div>
+                    
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Datos Personales</legend>
+                    Fecha de Nacimiento
+                    <div>
+                        <input type="date" id="FecNac" name="FecNacim" placeholder="dd/mm/aaaa" required size="12" minlength="11" maxlength="12" tabindex="7"/>
+                        <span id="muestraedad" ></span>
+                        <div></div>
+                        <span id="cartelerror"></span>
+                    </div>
+                    Estado Civil
+                    <div>
+                        <input type="text" name="Estadocivl" placeholder="Ej.: Soltero" required size="40" title="Soltero / Concuvinato / Casado / Divorciado / Viudo" minlength="4" maxlength="40" tabindex="8"/>
+                    </div>
+                    <div class="hijos">
+                    Hijos
+                        <input id="hijo_si" type="radio" required name="hijos" value="si" required /><label for="hijo_si">SI</label>
+                        <input id="hijo_no" type="radio" required name="hijos" value="no" required /><label for="hijo_no">NO</label>
+                        <sapn id="label_hijos">Cantidad</span>
+                        <input id="input_hijos" type="number" name="CantHijos" required ccols="3" value="0"/>
+                    </div>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Nivel de Formacion</legend>
+                    <br>
+                    <div>
+                        Primario Completo
+                        <input id="Prim_si" type="radio" required name="Prim" value="si" required /><label for="Prim_si">SI</label>
+                        <input id="Prim_no" type="radio" required name="Prim" value="no" required /><label for="Prim_no">NO</label>
+                        <span id="prim_comp" ></span>
+                    </div><br>
+                    
+                    <div id="Primario">
+                        Establecimiento Educativo
+                        <div>
+                            <input type="text" id="Prinom" name="EstPrim" placeholder="Nombre del Establecimieto Primario" size="40" minlength="6" maxlength="50" tabindex=""/>
+                        </div>
+                        <div>
+                            Fecha desde
+                            <input type="date" id="PrimFecInicio" name="PrimFecInicio" placeholder="dd/mm/aaaa" size="12" minlength="11" maxlength="12" tabindex=""/>
+                        </div>
+                        <div>
+                            Fecha hasta
+                            <input type="date" id="PrimFecFin" name="PrimFecFin" placeholder="dd/mm/aaaa" size="12" minlength="11" maxlength="12" tabindex=""/>
+                        </div>
+                    </div><br>
+                    <div>
+                        Secundario Completo
+                        <input id="Sec_si" type="radio" required name="Sec" value="si" required /><label for="Sec_si">SI</label>
+                        <input id="Sec_no" type="radio" required name="Sec" value="no" required /><label for="Sec_no">NO</label>
+                        <span id="sec_comp" ></span>
+                    </div><br>
+                    
+                    <div id="Secundario">
+                        Establecimiento Educativo
+                        <div>
+                            <input type="text" id="Secnom" name="EstSec" placeholder="Nombre del Establecimieto Secundario" size="40" minlength="6" maxlength="50" tabindex=""/>
+                        </div>
+                        Titulo obtenido
+                        <div>
+                            <input type="text" id="Titsec"name="TitSec" placeholder="Ej.: Bachiller con orientación Pedagógica" size="40" minlength="6" maxlength="50" tabindex=""/>
+                        </div>
+                        <div>
+                            Fecha desde
+                            <input type="date" id="SecFecInicio" name="SecFecInicio" placeholder="dd/mm/aaaa" size="12" minlength="11" maxlength="12" tabindex=""/>
+                        </div>
+                        <div>
+                            Fecha hasta
+                            <input type="date" id="SecFecFin" name="SecFecFin" placeholder="dd/mm/aaaa" size="12" minlength="11" maxlength="12" tabindex=""/>
+                        </div>
+                    </div><br>
+                    
+                    <div>
+                        Nivel Superior Completo
+                        <input id="Sup_si" type="radio" required name="Sup" value="si" required /><label for="Sup_si">SI</label>
+                        <input id="Sup_no" type="radio" required name="Sup" value="no" required /><label for="Sup_no">NO</label>
+                        <input id="Sup_Cursando" type="radio" required name="Sup" value="Cursando" required /><label for="Sup_Cursando">CURSANDO</label>
+                    </div><br>
+                    
+                    <div id="Superior">
+                        Establecimiento Educativo
+                        <div>
+                            <input type="text" id="Supnom" name="EstSup" placeholder="Nombre del Terciario / Universidad" size="40" minlength="6" maxlength="50" tabindex=""/>
+                        </div>
+                        Titulo obtenido / A obtener
+                        <div>
+                            <input type="text" id="Titsup"name="TitSup" placeholder="Ej.: Analista en Sistema de Información" size="40" minlength="6" maxlength="50" tabindex=""/>
+                        </div>
+                        <div>
+                            Fecha desde
+                            <input type="date" id="SupFecInicio" name="SupFecInicio" placeholder="dd/mm/aaaa" size="12" minlength="11" maxlength="12" tabindex=""/>
+                        </div>
+                        <div>
+                            Fecha hasta
+                            <input type="date" id="SupFecFin" name="SupFecFin" placeholder="dd/mm/aaaa" size="12" minlength="11" maxlength="12" tabindex=""/>
+                        </div><br>
+                        <div id="Cursado">
+                            Año Cursado
+                            <input type="text" name="CursSup" placeholder="Ej.: cuarto aprobado"  tabindex=""/>
+                        </div>
+                    </div>
+                
+                </fieldset>
+                <br>
+                <fieldset>
+                    Experiencia Laboral
+                    <input id="ExpLab_si" type="radio" required name="Exp" value="si" required /><label for="ExpLab_si">SI</label>
+                    <input id="ExpLab_no" type="radio" required name="Exp" value="no" required /><label for="ExpLab_no">NO</label>
+                </fieldset>
+                <br>
+                <fieldset id="trab1">
+                    <legend>Último Trabajo</legend>
+                    Cargo Desempeñado
+                    <div>
+                        <input type="text" id="Trab1cargo" name="Trab1cargo" placeholder="Ej.: Administrativo" size="40" minlength="6" maxlength="50" tabindex=""/>
+                    </div>
+                    Empresa
+                    <div>
+                        <input type="text" id="Trab1Empresa" name="Trab1Empresa" placeholder=" Nombre de la Empresa" size="40" minlength="6" maxlength="50" tabindex=""/>
+                    </div>
+                    Direccion
+                    <div>
+                        <input type="text" id="Trab1DirEmpresa" name="Trab1DirEmpresa" placeholder="Direccion de la Empresa" size="40" minlength="6" maxlength="50" tabindex=""/>
+                    </div>
+                    Telefono
+                    <div>
+                        <input type="number" id="Trab1Tel" name="Trab1Tel" placeholder="Ingrese telefono de la Empresa"  tabindex=""/>
+                    </div>
+                    Nombre Contacto
+                    <div>
+                        <input type="text" id="Trab1NomCont" name="Trab1NomCont" placeholder="Nombre de la persona para contacto" size="40" minlength="6" maxlength="50" tabindex=""/>
+                    </div>
+                    <div>
+                        Fecha desde
+                        <input type="date" id="Trab1FecInicio" name="Trab1FecInicio" placeholder="dd/mm/aaaa"  size="12" minlength="11" maxlength="12" tabindex=""/>
+                    </div>
+                    <div>
+                        Fecha hasta
+                        <input type="date" id="Trab1FecFin" name="Trab1FecFin" placeholder="dd/mm/aaaa"  size="12" minlength="11" maxlength="12" tabindex=""/>
+                    </div>
+                    Breve descripción de las tareas desempeñadas
+                    <div>
+                        <textarea id="Trab1DescTar" name="Trab1DescTar" placeholder="EJ.: Facturación de cuentas corrientes"  cols="40" rows="4"></textarea>
+                    </div>
+                    Logros Claves
+                    <div>
+                        <textarea id="Trab1LogCla" name="Trab1LogCla" placeholder="Ej.: Reducir 50% el numero de procesos para la generación de pedidos" cols="40" rows=""></textarea>
+                    </div>
+                </fieldset>
+                <br>
+                <fieldset id="trab2">
+                    <legend>Trabajo Anterior (opcional)</legend>
+                    Cargo Desempeñado
+                    <div>
+                        <input type="text" name="Trab2cargo" placeholder="Ej.: Administrativo" size="40" minlength="6" maxlength="50" tabindex=""/>
+                    </div>
+                    Empresa
+                    <div>
+                        <input type="text" name="Trab2Empresa" placeholder=" Nombre de la Empresa"  size="40" minlength="6" maxlength="50" tabindex=""/>
+                    </div>
+                    Direccion
+                    <div>
+                        <input type="text" name="Trab2DirEmpresa" placeholder="Direccion de la Empresa"  size="40" minlength="6" maxlength="50" tabindex=""/>
+                    </div>
+                    Telefono
+                    <div>
+                        <input type="number" name="Trab2Tel" placeholder="Ingrese telefono de la Empresa" tabindex="5"/>
+                    </div>
+                    Nombre Contacto
+                    <div>
+                        <input type="text" name="Trab2NomCont" placeholder="Nombre de la persona para contacto" size="40" minlength="6" maxlength="50" tabindex=""/>
+                    </div>
+                    <div>
+                        Fecha desde
+                        <input type="date" id="Trab2FecInicio" name="Trab2FecInicio" placeholder="dd/mm/aaaa" size="12" minlength="11" maxlength="12" tabindex=""/>
+                    </div>
+                    <div>
+                        Fecha hasta
+                        <input type="date" id="Trab2FecFin" name="Trab2FecFin" placeholder="dd/mm/aaaa" size="12" minlength="11" maxlength="12" tabindex=""/>
+                    </div>
+                    Breve descripción de las tareas desempeñadas
+                    <div>
+                        <textarea name="Trab2DescTar" placeholder="EJ.: Facturación de cuentas corrientes" cols="40" rows="4"></textarea>
+                    </div>
+                    Logros Claves
+                    <div>
+                        <textarea name="Trab2LogCla" placeholder="Ej.: Reducir 50% el numero de procesos para la generación de pedidos" cols="40" rows="4"></textarea>
+                    </div>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Idiomas</legend>
+                    Idioma 1
+                    <div>
+                    <input type="text" name="Idioma1" placeholder="Idioma" size="10" maxlength="10" tabindex=""/>
+                    <label for="Nivel1" name="Nivel1">Nivel </label>
+                    <select id="Nivel1">
+                    <option value="">--Haga una elección--</option>
+                    <option value="Basico">Básico</option>
+                    <option value="Intermedio">Intermedio</option>
+                    <option value="Avanzado">Avanzado</option>
+                    </select>
+                    </div>
+                    Idioma 2
+                    <div>
+                    <input type="text" name="Idioma2" placeholder="Idioma" size="10" maxlength="10" tabindex=""/>
+                    <label for="Nivel2" name="Nivel2">Nivel </label>
+                    <select id="Nivel2">
+                    <option value="">--Haga una elección--</option>
+                    <option value="Basico">Básico</option>
+                    <option value="Intermedio">Intermedio</option>
+                    <option value="Avanzado">Avanzado</option>
+                    </select>
+                    </div>
+                    Idioma 3
+                    <div>
+                    <input type="text" name="Idioma3" placeholder="Idioma" size="10" maxlength="10" tabindex=""/>
+                    <label for="Nivel3" name="Nivel3">Nivel </label>
+                    <select id="Nivel3">
+                    <option value="">--Haga una elección--</option>
+                    <option value="Basico">Básico</option>
+                    <option value="Intermedio">Intermedio</option>
+                    <option value="Avanzado">Avanzado</option>
+                    </select>
+                    </div>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Informacion Adicional.</legend>
+                    Aptitudes para el trabajo
+                    <div>
+                        <textarea name="Aptitudes" placeholder="EJ.: Proactivo, capacidad de trabajo en equipo" required cols="40" rows="4"></textarea>
+                    </div>
+                    Información complementaria
+                    <div>
+                        <textarea name="InfoComp" placeholder="Ej.: Carnet de cargas peligrosas" required cols="40" rows="4"></textarea>
+                    </div>
+                </fieldset><br>
+                <hr id= "linea">
+                <div class="Boton">
+                    <button type="submit" id="Enviar">Enviar</button>
+                </div>
+            </form><br>
+        </Section>
+    </main> 
+    <footer id="Piedepagina">
+        <hr id= "linea">
+        <p id="InfoFinal">
+            Asegurate de enviar los datos correctamente, esta información será revisada y evaluada por el sector de recursos Humanos
+        </p>
+        <p id="despedida">
+            MUCHAS GRACIAS
+        </p>
+    </footer>
+</body>
+</html>
